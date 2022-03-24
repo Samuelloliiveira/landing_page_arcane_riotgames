@@ -29,7 +29,7 @@ h1 {
 
 a, .menu-main ul li {
     cursor: pointer;
-    outline: none;
+    text-decoration: none;
 }
 
 .container {
@@ -38,8 +38,7 @@ a, .menu-main ul li {
 }
 
 header {
-
-    background-color: rgba(0, 0, 0, 0.40);
+    background-color: rgba(0, 0, 0, 0.301);
     display: flex;
     align-items: center;
 
@@ -55,12 +54,33 @@ header {
     gap: 1.8rem;
 }
 
+.logo-menu {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.logo-menu img {
+    max-width: 1.3rem;
+}
+
 .menu-main,
 .menu-main ul {
     display: flex;
     align-items: center;
     gap: 1.5rem;
     list-style: none;
+}
+
+.menu-main ul li {
+    width: 10rem;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 1rem;
+}
+
+.menu-main ul li:hover {
+    background-color: rgba(0, 0, 0, 0.123);
 }
 
 .character-info {
@@ -77,4 +97,15 @@ header {
     font-size: 1.6rem;
     padding: 0.2rem;
     line-height: 3rem;
+}
+
+.next-character {
+    position: relative;
+    max-width: 5rem;
+    margin: -15rem 10rem 0 auto;
+    cursor: pointer;
+}
+
+.next-character img {
+    max-width: 5rem;
 }
