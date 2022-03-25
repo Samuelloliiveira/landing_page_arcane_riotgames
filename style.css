@@ -15,7 +15,8 @@ body {
     font-size: 1.5rem;
     position: absolute;
 
-    background-image: url('img/mel.png');
+    background: black;
+
     background-repeat: no-repeat;
     background-size: cover;
 
@@ -25,11 +26,6 @@ body {
 h1 {
     font-size: 4rem;
     margin: 1rem 0 1rem;
-}
-
-a, .menu-main ul li {
-    cursor: pointer;
-    text-decoration: none;
 }
 
 .container {
@@ -86,7 +82,7 @@ header {
 .character-info {
     margin-top: 30rem;
     width: 45rem;
-    margin-left: 10rem;
+    margin-left: 7rem;
 }
 
 .character-info p:nth-child(1) {
@@ -102,7 +98,7 @@ header {
 .next-character {
     position: relative;
     max-width: 5rem;
-    margin: -14rem 10rem 0 auto;
+    margin: -14rem 17rem 0 auto;
     cursor: pointer;
 }
 
