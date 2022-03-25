@@ -60,7 +60,6 @@ function showInfo(characters, index = 0) {
     }
 }
 
-//Precisa arrumar uma lógica melhor para passar o index
 function nextCharacter(characters) {
     const next = document.querySelector(".next-character")
 
@@ -73,7 +72,7 @@ function nextCharacter(characters) {
         showInfo(characters, index)
         changeImage(characters, index)
     })
-    
+
 }
 
 function changeImage(characters, index = 0) {
@@ -84,6 +83,13 @@ function changeImage(characters, index = 0) {
 
 }
 
-nextCharacter(characters)
-showInfo(characters)//Talvez não precise chamar aqui, procurar uma lógica melhor
-changeImage(characters)
+function byCallingTheFunctions() {
+    nextCharacter(characters)
+    showInfo(characters)
+    changeImage(characters)
+}
+
+
+byCallingTheFunctions()
+
+//VOLTAR PARA O INICIO QUANDO CHEGAR NA ULTIMA IMAGEM
