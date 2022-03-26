@@ -83,12 +83,34 @@ function changeImage(characters, index = 0) {
 
 }
 
+function openCloseMenuLogo() {
+    const logo = document.querySelector(".logo")
+    const logo2 = document.querySelector(".logo2")
+    const menuLogo = document.querySelector(".menu-logo")
+    const close = document.querySelector(".close")
+
+    logo.addEventListener('click', () => {
+        menuLogo.classList.add('active')
+    })
+    
+    logo2.addEventListener('click', () => {
+        menuLogo.classList.remove('active')
+    })
+
+    close.addEventListener('click', () => {
+        menuLogo.classList.remove('active')
+    })
+
+}
+
 function byCallingTheFunctions() {
     nextCharacter(characters)
     showInfo(characters)
     changeImage(characters)
+    openCloseMenuLogo()
 }
 
 byCallingTheFunctions()
 
 //VOLTAR PARA O INICIO QUANDO CHEGAR NA ULTIMA IMAGEM
+//FECHAR O MENU QUANDO CLICAR NA PARTE QUE SOBRA DA TELA QUANDO O MENU ESTA ABERTO

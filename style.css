@@ -24,14 +24,18 @@ body {
     color: white;
 }
 
+.container {
+	margin-left: 1.8rem;
+	margin-right: 1.8rem;
+}
+
+.OpenCloseSVG {
+	max-width: 1.2rem;
+}
+
 h1 {
     font-size: 4rem;
     margin: 1rem 0 1rem;
-}
-
-.container {
-    margin-left: 1.8rem;
-    margin-right: 1.8rem;
 }
 
 /* HEADER / MENU */
@@ -50,6 +54,11 @@ header {
     display: flex;
     align-items: center;
     gap: 1.8rem;
+}
+
+.logo, .logo2 {
+	display: flex;
+	align-items: center;
 }
 
 /* menu príncipal */
@@ -99,7 +108,7 @@ menu img {
 .header-menu-logo {
 	display: flex;
 	justify-content: space-between;
-	margin: 3rem 5rem;
+	margin: 2rem 2rem;
 }
 
 .close,
@@ -118,6 +127,15 @@ menu img {
 
 .circle img {
 	max-width: 2rem;
+}
+
+.logo {
+	fill: white;
+}
+
+.logo:hover,
+.logo2:hover {
+	fill: red;
 }
 
 /* SECTION COM AS INFO */
