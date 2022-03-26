@@ -1,3 +1,4 @@
+/* CONFIGURAÇÕES */
 * {
     margin: 0;
     padding: 0;
@@ -33,6 +34,7 @@ h1 {
     margin-right: 1.8rem;
 }
 
+/* HEADER / MENU */
 header {
     background-color: rgba(0, 0, 0, 0.301);
     display: flex;
@@ -50,13 +52,14 @@ header {
     gap: 1.8rem;
 }
 
-.logo-menu {
+/* menu príncipal */
+menu {
     display: flex;
     align-items: center;
     gap: .5rem;
 }
 
-.logo-menu img {
+menu img {
     max-width: 1.3rem;
 }
 
@@ -79,6 +82,45 @@ header {
     background-color: rgba(224, 209, 209, 0.301);
 }
 
+/* menu que abre ao clicar na logo */
+.menu-logo {
+	background: white;
+	width: 100%;
+	height: 40rem;
+	position: fixed;
+	top: 0;
+	visibility: hidden;
+}
+
+.menu-logo.active {
+	visibility: visible;
+}
+
+.header-menu-logo {
+	display: flex;
+	justify-content: space-between;
+	margin: 3rem 5rem;
+}
+
+.close,
+.circle {
+	width: 4rem;
+	height: 4rem;
+}
+
+.circle {
+	clip-path: circle();
+	background: #e0e0de;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.circle img {
+	max-width: 2rem;
+}
+
+/* SECTION COM AS INFO */
 .character-info {
     margin-top: 30rem;
     width: 45rem;
@@ -95,6 +137,7 @@ header {
     line-height: 3rem;
 }
 
+/* BOTÃO PRÓXIMO PERSONSAGEM */
 .next-character {
     position: relative;
     max-width: 5rem;

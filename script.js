@@ -89,7 +89,6 @@ function byCallingTheFunctions() {
     changeImage(characters)
 }
 
-
 byCallingTheFunctions()
 
 //VOLTAR PARA O INICIO QUANDO CHEGAR NA ULTIMA IMAGEM
