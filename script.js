@@ -50,12 +50,9 @@ function showInfo(characters, index = 0) {
     for (let i = 0; i < characterName.length; i++) {
         //modelando a DOM
         infoSection.innerHTML = `
-            <section class="character-info">
-                <!-- os dados são adicionados pela DOM -->
-                <p>${characterInfo[index].locality}</p>
-                <h1>${characterName[index]}</h1>
-                <p>${characterInfo[index].info}</p>
-            </section>
+            <p>${characterInfo[index].locality}</p>
+            <h1>${characterName[index]}</h1>
+            <p>${characterInfo[index].info}</p>
         `
     }
 }
@@ -92,7 +89,7 @@ function openCloseMenuLogo() {
     logo.addEventListener('click', () => {
         menuLogo.classList.add('active')
     })
-    
+
     logo2.addEventListener('click', () => {
         menuLogo.classList.remove('active')
     })
