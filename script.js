@@ -85,6 +85,7 @@ function openCloseMenuLogo() {
     const logo2 = document.querySelector(".logo2")
     const menuLogo = document.querySelector(".menu-logo")
     const close = document.querySelector(".close")
+    const main = document.querySelector("main")
 
     logo.addEventListener('click', () => {
         menuLogo.classList.add('active')
@@ -98,6 +99,47 @@ function openCloseMenuLogo() {
         menuLogo.classList.remove('active')
     })
 
+    main.addEventListener("click", () => {
+        menuLogo.classList.remove('active')
+    })
+
+}
+
+function closeArrow(games) {
+    //trocar seta do lado de jogos
+    games.innerHTML = `
+        <a href="#"></a>JOGOS
+        <img src="img/close.svg" alt="">
+    `
+}
+
+function openArrow(games) {
+    //trocar seta do lado de jogos
+    games.innerHTML = `
+        <a href="#"></a>JOGOS
+        <img src="img/open.svg" alt="">
+    `
+}
+
+function openCloseSubMenu() {
+    const games = document.querySelector(".games")
+    const submenu = document.querySelector(".games-submenu")
+    const main = document.querySelector("main")
+
+    games.addEventListener("mouseover", () => {
+        submenu.classList.add('active')
+        closeArrow(games)
+    })
+
+    main.addEventListener("mouseout", () => {
+        submenu.classList.remove('active')
+        openArrow(games)
+    })
+
+    main.addEventListener("click", () => {
+        submenu.classList.remove('active')
+        openArrow(games)
+    })
 }
 
 function byCallingTheFunctions() {
@@ -105,9 +147,11 @@ function byCallingTheFunctions() {
     showInfo(characters)
     changeImage(characters)
     openCloseMenuLogo()
+    openCloseSubMenu()
 }
 
 byCallingTheFunctions()
 
 //VOLTAR PARA O INICIO QUANDO CHEGAR NA ULTIMA IMAGEM
-//FECHAR O MENU QUANDO CLICAR NA PARTE QUE SOBRA DA TELA QUANDO O MENU ESTA ABERTO
+//PROCURAR MELHORAR A PASSAGEM DO INDEX
+//PASSAR IMAGEM NO MENU LOGO

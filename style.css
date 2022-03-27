@@ -70,6 +70,7 @@ header {
 .logo, .logo2 {
 	display: flex;
 	align-items: center;
+    cursor: pointer;
 }
 
 /* menu príncipal */
@@ -96,10 +97,46 @@ menu img {
     padding: 1rem;
     text-align: center;
     border-radius: 1rem;
+    cursor: pointer;
 }
 
 .menu-main ul li:hover {
     background-color: rgba(224, 209, 209, 0.301);
+}
+
+.games-submenu {
+    position: fixed;
+    background: #1a1a18;
+    width: 20rem;
+    height: 25rem;
+    margin-top: 30rem;
+    margin-left: 16.8rem;
+    border-radius: .5rem;
+    border-top: 4px solid red;
+    
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    visibility: hidden;
+}
+
+.games-submenu.active {
+    visibility: visible;
+}
+
+.games-submenu ul li {
+    padding: .8rem;
+    margin: .8rem;
+    border-radius: .4rem;
+}
+
+.games-submenu ul li:hover {
+    background: #7d7d7c;
+}
+
+.games-submenu ul li a {
+    color: #e8e8e6;
 }
 
 /* menu que abre ao clicar na logo */
@@ -107,10 +144,11 @@ menu img {
 	background: white;
     color: #000;
 	width: 100%;
-	height: 40rem;
+	height: 45rem;
 	position: fixed;
 	top: 0;
 	visibility: hidden;
+
 }
 
 .menu-logo.active {
@@ -150,11 +188,19 @@ menu img {
 	fill: red;
 }
 
+.content-menu-logo {
+    display: flex;
+    justify-content: space-between;
+}
+
 /* tópicos */
 .topics {
+    width: 50rem;
     margin-left: 4rem;
     font-size: 1.4rem;
     text-transform: uppercase;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 .topics p,
@@ -163,7 +209,7 @@ menu img {
     width: 20rem;
     font-weight: bold;
     padding: 0.8rem;
-    margin: 1rem 0 1rem;
+    margin: 1rem 0 1rem
 }
 
 .topics ul li {
@@ -173,6 +219,15 @@ menu img {
 
 .topics ul li a {
     color: #8a8484;
+}
+
+.cover {
+    margin-right: 10rem;
+}
+
+.cover img {
+    max-width: 55rem;
+    border-radius: 1rem;
 }
 
 /* SECTION COM AS INFO */
