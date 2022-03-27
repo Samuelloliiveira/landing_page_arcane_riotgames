@@ -42,43 +42,47 @@ const characters = {
     }
 }
 
-function showInfo(characters, index = 0) {
-    const infoSection = document.querySelector(".character-info")
-    const characterName = Object.keys(characters)
-    const characterInfo = Object.values(characters)
-
-    for (let i = 0; i < characterName.length; i++) {
-        //modelando a DOM
-        infoSection.innerHTML = `
-            <p>${characterInfo[index].locality}</p>
-            <h1>${characterName[index]}</h1>
-            <p>${characterInfo[index].info}</p>
-        `
-    }
+function showCharacterInfo() {
+    //pegar os dados do personagens e colocar na tela
 }
 
-function nextCharacter(characters) {
-    const next = document.querySelector(".next-character")
+// function showInfo(characters, index = 0) {
+//     const infoSection = document.querySelector(".character-info")
+//     const characterName = Object.keys(characters)
+//     const characterInfo = Object.values(characters)
 
-    let index = 0
+//     for (let i = 0; i < characterName.length; i++) {
+//         //modelando a DOM
+//         infoSection.innerHTML = `
+//             <p>${characterInfo[index].locality}</p>
+//             <h1>${characterName[index]}</h1>
+//             <p>${characterInfo[index].info}</p>
+//         `
+//     }
+// }
 
-    next.addEventListener('click', () => {
+// function nextCharacter(characters) {
+//     const next = document.querySelector(".next-character")
 
-        index++
+//     let index = 0
 
-        showInfo(characters, index)
-        changeImage(characters, index)
-    })
+//     next.addEventListener('click', () => {
 
-}
+//         index++
 
-function changeImage(characters, index = 0) {
-    const body = document.querySelector("body")
-    const characterInfo = Object.values(characters)
+//         showInfo(characters, index)
+//         changeImage(characters, index)
+//     })
 
-    body.style.backgroundImage = `url('img/${characterInfo[index].image}')`
+// }
 
-}
+// function changeImage(characters, index = 0) {
+//     const body = document.querySelector("body")
+//     const characterInfo = Object.values(characters)
+
+//     body.style.backgroundImage = `url('img/${characterInfo[index].image}')`
+
+// }
 
 function openCloseMenuLogo() {
     const logo = document.querySelector(".logo")
@@ -143,9 +147,10 @@ function openCloseSubMenu() {
 }
 
 function byCallingTheFunctions() {
-    nextCharacter(characters)
-    showInfo(characters)
-    changeImage(characters)
+    // nextCharacter(characters)
+    // showInfo(characters)
+    // changeImage(characters)
+    showCharacterInfo()
     openCloseMenuLogo()
     openCloseSubMenu()
 }
