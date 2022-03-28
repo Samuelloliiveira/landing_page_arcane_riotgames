@@ -56,6 +56,14 @@ const imagesMenu = [
         "alt": "conheça o evento riotx arcane"
     },
     {
+        "img": "lol.jpg",
+        "alt": "league of legends"
+    },
+    {
+        "img": "valorant.jpg",
+        "alt": "valorant"
+    },
+    {
         "img": "arcane.jpg",
         "alt": "série arcane"
     },
@@ -66,14 +74,6 @@ const imagesMenu = [
     {
         "img": "riot_music.jpeg",
         "alt": "riot music"
-    },
-    {
-        "img": "lol.jpg",
-        "alt": "league of legends"
-    },
-    {
-        "img": "valorant.jpg",
-        "alt": "valorant"
     },
     {
         "img": "riot_empresa.png",
@@ -199,11 +199,13 @@ function imagesInMenuLogo(imagesMenu) {
     const topic = document.querySelectorAll(".sub-topic")
     const cover = document.querySelector(".cover")
 
-    topic[0].addEventListener("mouseover", () => {
-        cover.innerHTML = `
-            <img src="img/${imagesMenu[0].img}" alt="${imagesMenu[0].alt}">
-        `
-    })
+    for (let i = 0; i < 9; i++) {
+        topic[i].addEventListener("mouseover", () => {
+            cover.innerHTML = `
+                <img src="img/${imagesMenu[i].img}" alt="${imagesMenu[i].alt}">
+            `
+        })
+    }
 
 }
 
@@ -216,6 +218,3 @@ function byCallingTheFunctions() {
 }
 
 byCallingTheFunctions()
-
-//presica arrumar uma forma de criar passar um index de acordo 
-//com o número do topico que o mouse esta em cima
