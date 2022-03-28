@@ -107,20 +107,24 @@ function openCloseMenuLogo() {
 
 }
 
-function closeArrow(games) {
-    //trocar seta do lado de jogos
-    games.innerHTML = `
-        <a href="#"></a>JOGOS
-        <img src="img/close.svg" alt="">
-    `
-}
+function openCloseArrow(games) {
+    const submenu = document.querySelector(".games-submenu")
+    const containsActive = submenu.classList.contains('active')
 
-function openArrow(games) {
-    //trocar seta do lado de jogos
-    games.innerHTML = `
-        <a href="#"></a>JOGOS
-        <img src="img/open.svg" alt="">
-    `
+    //trocar a seta de lado na opção jogos no menu
+    if (containsActive) {
+        games.innerHTML = `
+            <a href="#"></a>JOGOS
+            <img src="img/close.svg" alt="">
+        `
+    } else {
+        games.innerHTML = `
+            <a href="#"></a>JOGOS
+            <img src="img/open.svg" alt="">
+        `
+    }
+
+
 }
 
 function openCloseSubMenu() {
@@ -130,17 +134,17 @@ function openCloseSubMenu() {
 
     games.addEventListener("mouseover", () => {
         submenu.classList.add('active')
-        closeArrow(games)
+        openCloseArrow(games)
     })
 
     main.addEventListener("mouseout", () => {
         submenu.classList.remove('active')
-        openArrow(games)
+        openCloseArrow(games)
     })
 
     main.addEventListener("click", () => {
         submenu.classList.remove('active')
-        openArrow(games)
+        openCloseArrow(games)
     })
 }
 
