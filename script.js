@@ -50,16 +50,27 @@ const characters = [
     }
 ]
 
-function showCharacterInfo(characters) {
-    const infoSection = document.querySelector(".character-info")
+function nextCharacter(characters) {
     const nextCharacter = document.querySelector(".next-character")
-    const body = document.querySelector("body")
-
     let index = 0
 
     nextCharacter.addEventListener('click', () => {
-        //aqui dentro eu tenho que achar uma forma de retornar um index
+        index++
+
+        //cria um loop nas informações
+        if (index == characters.length) {
+            index = 0
+        }
+
+        showCharacterInfo(index)
+
     })
+}
+
+function showCharacterInfo(index = 0) {
+    const infoSection = document.querySelector(".character-info")
+    const body = document.querySelector("body")
+
 
     infoSection.innerHTML = `
         <p>${characters[index].locality}</p>
@@ -134,13 +145,12 @@ function openCloseSubMenu() {
 }
 
 function byCallingTheFunctions() {
-    showCharacterInfo(characters)
+    nextCharacter(characters)
+    showCharacterInfo()
     openCloseMenuLogo()
     openCloseSubMenu()
 }
 
 byCallingTheFunctions()
 
-//VOLTAR PARA O INICIO QUANDO CHEGAR NA ULTIMA IMAGEM
-//PROCURAR MELHORAR A PASSAGEM DO INDEX
 //PASSAR IMAGEM NO MENU LOGO
