@@ -156,13 +156,28 @@ function openCloseSubMenu() {
     })
 }
 
+function imagesInMenuLogo() {
+    const topics = document.querySelector(".topics")
+    // const cover = document.querySelector(".cover")
+
+
+
+    // if () {
+    //     cover.innerHTML = `
+    //         <img src="img/arcane.jpg" alt="">
+    //     `
+    // }
+}
+
 function byCallingTheFunctions() {
     nextCharacter(characters)
     showCharacterInfo()
     openCloseMenuLogo()
     openCloseSubMenu()
+    imagesInMenuLogo()
 }
 
 byCallingTheFunctions()
 
-//PASSAR IMAGEM NO MENU LOGO
+//pegar todos os topics e criar um evento para cada um deles
+//nesse evento eu passo a imagem e o alt certo para cada um
