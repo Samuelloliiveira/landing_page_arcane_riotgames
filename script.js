@@ -50,6 +50,45 @@ const characters = [
     }
 ]
 
+const imagesMenu = [
+    {
+        "img": "riotxarcane.jpg",
+        "alt": "conheça o evento riotx arcane"
+    },
+    {
+        "img": "arcane.jpg",
+        "alt": "série arcane"
+    },
+    {
+        "img": "universo.jpg",
+        "alt": "o maravilhoso universo riot"
+    },
+    {
+        "img": "riot_music.jpeg",
+        "alt": "riot music"
+    },
+    {
+        "img": "lol.jpg",
+        "alt": "league of legends"
+    },
+    {
+        "img": "valorant.jpg",
+        "alt": "valorant"
+    },
+    {
+        "img": "riot_empresa.png",
+        "alt": "empresa riot"
+    },
+    {
+        "img": "mobile_riot.jpg",
+        "alt": "jogos mobile"
+    },
+    {
+        "img": "suporteriot.png",
+        "alt": "suporte riot"
+    }
+]
+
 function nextCharacter(characters) {
     const nextCharacter = document.querySelector(".next-character")
     let index = 0
@@ -156,17 +195,16 @@ function openCloseSubMenu() {
     })
 }
 
-function imagesInMenuLogo() {
-    const topics = document.querySelector(".topics")
-    // const cover = document.querySelector(".cover")
+function imagesInMenuLogo(imagesMenu) {
+    const topic = document.querySelectorAll(".sub-topic")
+    const cover = document.querySelector(".cover")
 
+    topic[0].addEventListener("mouseover", () => {
+        cover.innerHTML = `
+            <img src="img/${imagesMenu[0].img}" alt="${imagesMenu[0].alt}">
+        `
+    })
 
-
-    // if () {
-    //     cover.innerHTML = `
-    //         <img src="img/arcane.jpg" alt="">
-    //     `
-    // }
 }
 
 function byCallingTheFunctions() {
@@ -174,10 +212,10 @@ function byCallingTheFunctions() {
     showCharacterInfo()
     openCloseMenuLogo()
     openCloseSubMenu()
-    imagesInMenuLogo()
+    imagesInMenuLogo(imagesMenu)
 }
 
 byCallingTheFunctions()
 
-//pegar todos os topics e criar um evento para cada um deles
-//nesse evento eu passo a imagem e o alt certo para cada um
+//presica arrumar uma forma de criar passar um index de acordo 
+//com o número do topico que o mouse esta em cima
