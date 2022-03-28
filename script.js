@@ -89,20 +89,24 @@ function openCloseMenuLogo() {
     const close = document.querySelector(".close")
     const main = document.querySelector("main")
 
+    function remove() {
+        return menuLogo.classList.remove('active')
+    }
+
     logo.addEventListener('click', () => {
         menuLogo.classList.add('active')
     })
 
     logo2.addEventListener('click', () => {
-        menuLogo.classList.remove('active')
+        remove()
     })
 
     close.addEventListener('click', () => {
-        menuLogo.classList.remove('active')
+        remove()
     })
 
     main.addEventListener("click", () => {
-        menuLogo.classList.remove('active')
+        remove()
     })
 
 }
@@ -132,18 +136,22 @@ function openCloseSubMenu() {
     const submenu = document.querySelector(".games-submenu")
     const main = document.querySelector("main")
 
+    function remove() {
+        return submenu.classList.remove('active')
+    }
+
     games.addEventListener("mouseover", () => {
         submenu.classList.add('active')
         openCloseArrow(games)
     })
 
     main.addEventListener("mouseout", () => {
-        submenu.classList.remove('active')
+        remove()
         openCloseArrow(games)
     })
 
     main.addEventListener("click", () => {
-        submenu.classList.remove('active')
+        remove()
         openCloseArrow(games)
     })
 }
