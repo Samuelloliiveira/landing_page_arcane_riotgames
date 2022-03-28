@@ -1,5 +1,6 @@
 //Objeto JSON com os personagens
-const characters = [
+const characters = [ 
+    
     {
         "name": "Mel Medarda",
         "locality": "Piltover",
@@ -108,7 +109,7 @@ function nextCharacter(characters) {
 
 function showCharacterInfo(index = 0) {
     const infoSection = document.querySelector(".character-info")
-    const body = document.querySelector("body")
+    const containerInfo = document.querySelector(".container-info")
 
 
     infoSection.innerHTML = `
@@ -117,7 +118,7 @@ function showCharacterInfo(index = 0) {
         <p>${characters[index].info}</p>
     `
 
-    body.style.backgroundImage = `url('img/${characters[index].image}')`
+    containerInfo.style.backgroundImage = `url('img/${characters[index].image}')`
 
 }
 
