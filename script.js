@@ -1,52 +1,52 @@
-//Objeto JSON com os personagens
-const characters = [ 
-    
+//Array de objetos com os persongens e outro com as imagens do menu
+const characters = [
+
     {
         "name": "Mel Medarda",
         "locality": "Piltover",
-        "info": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate sit vero obcaecati sint dicta corporis sapiente molestias illum, tempore cum a culpa beatae praesentium possimus deleniti sequi voluptates itaque quia.",
+        "info": "É um aristocrata noxiana e membro do conselho governante de Piltover. Herdeira renegada do Clã Medarda , Mel é uma política ambiciosa disposta a fazer qualquer coisa para se colocar no topo. Usando suas proezas políticas, as ações que ela fez mudaram para sempre o curso da história de Piltover. ",
         "image": "mel.png"
     },
     {
         "name": "Caitlyn Kiramman",
         "locality": "Piltover",
-        "info": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate sit vero obcaecati sint dicta corporis sapiente molestias illum, tempore cum a culpa beatae praesentium possimus deleniti sequi voluptates itaque quia.",
+        "info": "Uma descendente do Kiramman Clan , uma das casas governantes de Piltover. Ansiosa para ver o mundo por si mesma e desdenhosa do estilo de vida elitista tradicional em que seus pais a criaram, Caitlyn se juntou aos Executores quando jovem para fazer seu nome.",
         "image": "caitlyn.png"
     },
     {
         "name": "Jayce Talis",
         "locality": "Piltover",
-        "info": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate sit vero obcaecati sint dicta corporis sapiente molestias illum, tempore cum a culpa beatae praesentium possimus deleniti sequi voluptates itaque quia.",
+        "info": "Cientista e inovador e, após anos de sucesso liderando o progresso científico da cidade e consequentemente seu progresso econômico, é atualmente o chefe do Conselho.",
         "image": "jayce.png"
     },
     {
         "name": "Powder(Jinx)",
         "locality": "Zaun",
-        "info": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate sit vero obcaecati sint dicta corporis sapiente molestias illum, tempore cum a culpa beatae praesentium possimus deleniti sequi voluptates itaque quia.",
+        "info": "Quando ela era uma menina, seus pais foram mortos em uma revolta fracassada contra Piltover , levando Vander , o líder franco da cidade subterrânea, para adotar ela e Vi como suas próprias filhas. Depois que uma série de eventos forçaram Jinx e sua irmã a se separarem de várias maneiras, ela foi fundamentalmente e irrevogavelmente mudada, transformando-a na assassina demente que ela é hoje.",
         "image": "jinx.png"
     },
     {
         "name": "Heimerdinger",
         "locality": "Piltover",
-        "info": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate sit vero obcaecati sint dicta corporis sapiente molestias illum, tempore cum a culpa beatae praesentium possimus deleniti sequi voluptates itaque quia.",
+        "info": "Figura renomada e respeitada em Piltover. Cientista, professor, reitor e ex-chefe do Conselho, Heimerdinger ajudou a moldar as mentes de jovens acadêmicos da Academia enquanto viveu por mais de três séculos, na esperança de orientá-los e alertá-los dos riscos potenciais da ciência e da magia.",
         "image": "heimerdinger.png"
     },
     {
         "name": "Violet(Vi)",
         "locality": "Zaun",
-        "info": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate sit vero obcaecati sint dicta corporis sapiente molestias illum, tempore cum a culpa beatae praesentium possimus deleniti sequi voluptates itaque quia.",
+        "info": "A irmã mais velha de Jinx . Uma mulher impetuosa e destemida que se destaca na luta e gosta de resolver seus problemas com os punhos, ela empunha um par de manoplas hextec poderosas que podem perfurar edifícios - e pessoas - com poucos problemas.",
         "image": "vi-arcane.jpg"
     },
     {
         "name": "viktor",
         "locality": "Piltover",
-        "info": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate sit vero obcaecati sint dicta corporis sapiente molestias illum, tempore cum a culpa beatae praesentium possimus deleniti sequi voluptates itaque quia.",
+        "info": "Ambicioso inventor zaunita que reside em Piltover , trabalhando como sócio de Jayce Talis . Uma vez trazido para a Academia como assistente de Heimerdinger , Viktor subiu da cidade subterrânea na esperança de melhorar a vida, mas sua pesquisa foi complicada ao descobrir que ele estava em estado terminal. No entanto, Viktor não deixa que sua doença o detenha e permanece firme na busca de uma cura.",
         "image": "viktor.png"
     },
     {
         "name": "Ekko",
         "locality": "Zaun",
-        "info": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate sit vero obcaecati sint dicta corporis sapiente molestias illum, tempore cum a culpa beatae praesentium possimus deleniti sequi voluptates itaque quia.",
+        "info": "Inventor Zaunita e o chefe dos Firelights . Ele também é amigo de infância de Vi e Jinx. Um indivíduo agressivo e endurecido pela batalha, Ekko aspira libertar a cidade subterrânea do governo de Silco e está disposto a colocar tudo o que tem, incluindo sua própria vida, em risco para alcançá-lo.",
         "image": "ekko.png"
     }
 ]
@@ -159,16 +159,14 @@ function openCloseArrow(games) {
     if (containsActive) {
         games.innerHTML = `
             <a href="#"></a>JOGOS
-            <img src="img/close.svg" alt="">
+            <img src="img/close.svg" alt="seta mostrando que o menu de jogos esta aberto">
         `
     } else {
         games.innerHTML = `
             <a href="#"></a>JOGOS
-            <img src="img/open.svg" alt="">
+            <img src="img/open.svg" alt="seta mostrando que o menu de jogos está fechado">
         `
     }
-
-
 }
 
 function openCloseSubMenu() {
@@ -207,7 +205,6 @@ function imagesInMenuLogo(imagesMenu) {
             `
         })
     }
-
 }
 
 function byCallingTheFunctions() {
