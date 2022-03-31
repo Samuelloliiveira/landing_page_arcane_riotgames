@@ -109,7 +109,7 @@ function nextCharacter(characters) {
 
 function showCharacterInfo(index = 0) {
     const infoSection = document.querySelector(".character-info")
-    const containerInfo = document.querySelector(".container-info")
+    const sectionMain = document.querySelector(".section-main")
 
 
     infoSection.innerHTML = `
@@ -118,7 +118,7 @@ function showCharacterInfo(index = 0) {
         <p>${characters[index].info}</p>
     `
 
-    containerInfo.style.backgroundImage = `url('img/${characters[index].image}')`
+    sectionMain.style.backgroundImage = `url('img/${characters[index].image}')`
 
 }
 
